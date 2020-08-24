@@ -40,3 +40,14 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# use for instance variables
+gem 'dotenv-rails'
+
+
+gem 'rack-cors'
+
+# used for HTTP requests
+gem 'httparty', '~> 0.13.7'
+
+# Automatic Ruby code style checking tool. Aims to enforce the community-driven Ruby Style Guide.
+gem 'rubocop', '~> 0.39.0'
