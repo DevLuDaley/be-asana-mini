@@ -27,7 +27,7 @@
 /config/master.key
 
 /shh/*
-/.env
-
-/nothing_to_see_here.rb
-show/no-show.txt
+# /shh/.env
+# .env #this works with only filename, no folder name
+# /shh/let's_see.md
+# let's_see.md #this works with only filename, no folder name
