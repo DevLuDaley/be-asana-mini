@@ -1,6 +1,6 @@
 class AddTasksToNotes < ActiveRecord::Migration[6.0]
   def change
-     add_reference :tasks, :notes
-     add_foreign_key :tasks, :notes
+     add_reference :notes, :task
+     add_foreign_key :notes, :tasks
   end
 end
