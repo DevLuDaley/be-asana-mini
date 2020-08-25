@@ -51,3 +51,5 @@ gem 'httparty', '~> 0.13.7'
 
 # Automatic Ruby code style checking tool. Aims to enforce the community-driven Ruby Style Guide.
 gem 'rubocop', '~> 0.39.0'
+
+gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
