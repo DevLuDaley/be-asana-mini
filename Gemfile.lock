@@ -98,9 +98,15 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
+    parallel (1.17.0)
     parser (2.7.1.4)
       ast (~> 2.4.1)
     pg (1.2.3)
+    pgsync (0.6.5)
+      parallel
+      pg (>= 0.18.2)
+      slop (>= 4.8.2)
+      tty-spinner
     powerpack (0.1.2)
     puma (4.3.5)
       nio4r (~> 2.0)
@@ -148,6 +154,7 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.10.1)
+    slop (4.8.2)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -161,6 +168,9 @@ GEM
       sprockets (>= 3.0.0)
     thor (1.0.1)
     thread_safe (0.3.6)
+    tty-cursor (0.7.1)
+    tty-spinner (0.9.3)
+      tty-cursor (~> 0.7)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
     unicode-display_width (1.7.0)
@@ -180,6 +190,7 @@ DEPENDENCIES
   httparty (~> 0.13.7)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
+  pgsync
   puma (~> 4.1)
   rack-cors
   rails (~> 6.0.3, >= 6.0.3.2)
