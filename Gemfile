@@ -55,3 +55,5 @@ gem 'rubocop', '~> 0.39.0'
 gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
 
 gem 'pgsync'
+
+gem 'faker', '~> 1.6', '>= 1.6.6'
