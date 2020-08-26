@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_025306) do
+ActiveRecord::Schema.define(version: 2020_08_26_161948) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,8 +18,10 @@ ActiveRecord::Schema.define(version: 2020_08_25_025306) do
   create_table "notes", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "task_id"
     t.string "name"
     t.text "body"
+    t.index ["task_id"], name: "index_notes_on_task_id"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -41,6 +43,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_025306) do
     t.text "body"
     t.boolean "completed"
     t.datetime "completed_at"
+    t.datetime "due_on"
     t.index ["task_id"], name: "index_subtasks_on_task_id"
   end
 
@@ -48,13 +51,12 @@ ActiveRecord::Schema.define(version: 2020_08_25_025306) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
-    t.bigint "note_id"
     t.datetime "completed_at"
     t.string "name"
     t.text "body"
     t.boolean "completed"
     t.bigint "project_id"
-    t.index ["note_id"], name: "index_tasks_on_note_id"
+    t.datetime "due_on"
     t.index ["project_id"], name: "index_tasks_on_project_id"
     t.index ["user_id"], name: "index_tasks_on_user_id"
   end
@@ -74,9 +76,9 @@ ActiveRecord::Schema.define(version: 2020_08_25_025306) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "notes", "tasks"
   add_foreign_key "projects", "users"
   add_foreign_key "subtasks", "tasks"
-  add_foreign_key "tasks", "notes"
   add_foreign_key "tasks", "projects"
   add_foreign_key "tasks", "users"
   add_foreign_key "users", "workspaces"

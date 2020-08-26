@@ -56,4 +56,8 @@ gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
 
 gem 'pgsync'
 
-gem 'faker', '~> 1.6', '>= 1.6.6'
+# use faker to load dummy data in the db
+# gem 'faker', '~> 1.6', '>= 1.6.6'
+
+#use faker + github => for newest version (includes Dat class which reg faker does not)
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
