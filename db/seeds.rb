@@ -53,23 +53,23 @@ users = User.create(
 
   projects = Project.create(
       [
-          { name: Faker::Name.name },
-          {name: "Rails-JS-Project", user_id: 1},
-          {name: "Interviews", user_id: 1},
-          {name: "Meetups", user_id: 1},
-          {name: "Algoryithms", user_id: 1},
-          {name: "proper #{Faker::Verb.base}", user_id: 1},
-          {name: "proper #{Faker::Verb.base}", user_id: 1},
-          {name: "proper #{Faker::Verb.base}", user_id: 1},
-          {name: "proper #{Faker::Verb.base}", user_id: 1},
-          {name: "proper #{Faker::Verb.base}", user_id: 1},
-          {name: "proper #{Faker::Verb.base}", user_id: 1},
-          {name: "proper #{Faker::Verb.base}", user_id: 1}, #10th
-          {name: "proper #{Faker::Verb.base}", user_id: 2},
-          {name: "proper #{Faker::Verb.base}", user_id: 2},
-          {name: "proper #{Faker::Verb.base}", user_id: 2}, #3rd
-          {name: "proper #{Faker::Verb.base}", user_id: 3},
-          {name: "proper #{Faker::Verb.base}", user_id: 3} #2nd
+        #   { name: Faker::Name.name },
+          {name: "Rails-JS-Project", user_id: 1, body: "This project will build upon my full stack super powers", color: "blue"},
+          {name: "Interviews", user_id: 1, body: "This project will get me hired", color: "blue"},
+          {name: "Meetups", user_id: 1, body: "This project will give me more coder friends", color: "blue"},
+          {name: "Algoryithms", user_id: 1, body: "This project will build upon my decision makeing and problem solving super powers", color: "blue"},
+          {name: "#{Faker::Verb.base}", user_id: 1, body: "#{Faker::Quote.robin} Batman", color: "#{Faker::Color.color_name}"},
+          {name: "#{Faker::Verb.base}", user_id: 1, body: "#{Faker::Quote.robin} Batman", color: "#{Faker::Color.color_name}"},
+          {name: "#{Faker::Verb.base}", user_id: 1, body: "#{Faker::Quote.robin} Batman", color: "#{Faker::Color.color_name}"},
+          {name: "#{Faker::Verb.base}", user_id: 1, body: "#{Faker::Quote.robin} Batman", color: "#{Faker::Color.color_name}"},
+          {name: "#{Faker::Verb.base}", user_id: 1, body: "#{Faker::Quote.robin} Batman", color: "#{Faker::Color.color_name}"},
+          {name: "#{Faker::Verb.base}", user_id: 1, body: "#{Faker::Quote.robin} Batman", color: "#{Faker::Color.color_name}"},
+          {name: "#{Faker::Verb.base}", user_id: 1, body: "#{Faker::Quote.robin} Batman", color: "#{Faker::Color.color_name}"}, #10th
+          {name: "#{Faker::Verb.base}", user_id: 2, body: "#{Faker::Quote.robin} Batman", color: "#{Faker::Color.color_name}"},
+          {name: "#{Faker::Verb.base}", user_id: 2, body: "#{Faker::Quote.robin} Batman", color: "#{Faker::Color.color_name}"},
+          {name: "#{Faker::Verb.base}", user_id: 2, body: "#{Faker::Quote.robin} Batman", color: "#{Faker::Color.color_name}"}, #3rd
+          {name: "#{Faker::Verb.base}", user_id: 3, body: "#{Faker::Quote.robin} Batman", color: "#{Faker::Color.color_name}"},
+          {name: "#{Faker::Verb.base}", user_id: 3, body: "#{Faker::Quote.robin} Batman", color: "#{Faker::Color.color_name}"} #2nd
             ]
         )
 #    projects
